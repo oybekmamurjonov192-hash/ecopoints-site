@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 33% 98%;
+    --foreground: 145 34% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 145 34% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 145 34% 16%;
+
+    --primary: 140 41% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 95 34% 94%;
+    --secondary-foreground: 145 30% 24%;
+
+    --muted: 95 29% 94%;
+    --muted-foreground: 145 14% 46%;
+
+    --accent: 92 31% 92%;
+    --accent-foreground: 145 30% 24%;
+
+    --destructive: 0 75% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 105 24% 89%;
+    --input: 105 24% 89%;
+    --ring: 140 41% 47%;
+
+    --radius: 1.25rem;
+
+    --sidebar-background: 90 33% 98%;
+    --sidebar-foreground: 145 34% 16%;
+    --sidebar-primary: 140 41% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 92 31% 92%;
+    --sidebar-accent-foreground: 145 30% 24%;
+    --sidebar-border: 105 24% 89%;
+    --sidebar-ring: 140 41% 47%;
+  }
+
+  .dark {
+    --background: 145 28% 10%;
+    --foreground: 90 20% 95%;
+
+    --card: 145 26% 13%;
+    --card-foreground: 90 20% 95%;
+
+    --popover: 145 26% 13%;
+    --popover-foreground: 90 20% 95%;
+
+    --primary: 138 38% 58%;
+    --primary-foreground: 145 28% 10%;
+
+    --secondary: 145 20% 18%;
+    --secondary-foreground: 90 20% 95%;
+
+    --muted: 145 20% 18%;
+    --muted-foreground: 100 10% 72%;
+
+    --accent: 145 20% 18%;
+    --accent-foreground: 90 20% 95%;
+
+    --destructive: 0 68% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 16% 22%;
+    --input: 145 16% 22%;
+    --ring: 138 38% 58%;
+    --sidebar-background: 145 28% 10%;
+    --sidebar-foreground: 90 20% 95%;
+    --sidebar-primary: 138 38% 58%;
+    --sidebar-primary-foreground: 145 28% 10%;
+    --sidebar-accent: 145 20% 18%;
+    --sidebar-accent-foreground: 90 20% 95%;
+    --sidebar-border: 145 16% 22%;
+    --sidebar-ring: 138 38% 58%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(180deg, rgba(248, 251, 246, 1) 0%, rgba(250, 252, 248, 1) 100%);
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+    color: hsl(var(--foreground));
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  a,
+  button,
+  input {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 200ms;
+  }
+}
